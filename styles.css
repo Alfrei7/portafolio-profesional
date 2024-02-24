@@ -1,41 +1,56 @@
 /* Estilos generales */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #3e4147;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
-    margin: 0;
-    padding-top: 30px;
+* {
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 15px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flexbox;
+    background-color: #ebf0f6; /* Fondo */
+}
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.2;
+    color: #333; /* Texto principal */
+    text-align: center; /* Centrar los títulos */
 }
 
 p {
-    margin-bottom: 20px;
+    margin: 0.5rem 0; /* Agregar espacio arriba y abajo */
+    color: #333; /* Texto principal */
+    text-align: justify; /* Justificar el texto */
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
+a {
+    color: #7b3578; /* Secundario */
+    text-decoration: none;
 }
 
-/* Encabezado */
-header {
-    background-color: #dfba69;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px 20px;
+a:hover {
+    text-decoration: underline;
 }
 
-header h1 {
+ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+}
+
+/* Estilos de encabezado y navegación */
+header {
+    background-color: #06090d; /* Fondo */
+    color: #fff; /* Texto */
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -44,254 +59,181 @@ nav {
     align-items: center;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
 nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: #fff; /* Texto */
+    padding: 0 1rem;
 }
 
 nav a:hover {
-    color: #5a2e2e;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Separación entre la presentación y el header */
-main {
-    margin-top: 30px;
-}
-
-.intro {
-    background-color:#5a2e2e;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Estilos para la sección de habilidades */
-#habilidades {
-    margin-top: 50px;
-}
-
-#habilidades .section-title {
-    text-align: center;
-    color: #333;
-}
-
-.skills-list {
-    list-style: none;
-    padding: 0;
+/* Estilos de las secciones */
+section {
+    padding: 4rem 2rem;
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+   
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+section:nth-child(even) {
+    background-color: #97aed2; /* Fondo alternativo */
+    color: #fff; /* Texto */
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+}
+
+section li {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+section li:nth-child(3n+1) {
+    margin-left: 0;
+}
+.project-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+.project-info p {
+    max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+    font-size: 14px;
+    margin: 0 auto; /* Alinea horizontalmente el contenedor del texto */
+}
+
+/* Estilos de la sección de contacto */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #7b3578; /* Fondo */
+    color: #fff; /* Texto */
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    display: flex;
     justify-content: center;
 }
 
-.skills-list li {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #dc3545;
-    color: #fff;
-    border-radius: 5px;
-    animation: bounceIn 1s ease-in-out forwards; /* Animación de bounce in */
+footer li {
+    margin: 0 1rem;
 }
 
-/* Animación */
-@keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0); /* Posición inicial */
-    }
-    40% {
-        transform: translateY(-30px); /* Subir */
-    }
-    60% {
-        transform: translateY(-15px); /* Subir un poco menos */
-    }
-}
-/* Animación para desvanecimiento */
-@keyframes fadeIn {
+/* Animaciones de secciones */
+.section-enter {
+    animation: fade-in 1s ease-out forwards;
+  }
+  
+  .section-exit {
+    animation: fade-out 1s ease-out forwards;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fade-in.is-intersecting {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-out {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-out.is-intersecting {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes fade-in {
     from {
-        opacity: 0;
+      opacity: 0;
+      transform: translateY(20px);
     }
     to {
-        opacity: 1;
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
 
-.fadeIn {
-    animation: fadeIn 1s ease-in-out;
-}
+  /* Carrusel de imágenes para los proyectos*/
 
-/* Estilos para la página de contacto */
-#contact {
-    margin-top: 50px;
-}
-
-#contact .section-title {
-    text-align: center;
-    color: #fff;
-}
-
-.contact-info {
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-.contact-buttons {
+  .carousel {
+    position: relative;
+    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto;
+    overflow: hidden;
+    border: 3px solid #000000; /* Agrega un borde para delimitar el carrusel */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra para resaltar el carrusel */
+  }
+  
+  .slides {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
+    transition: transform 0.5s ease;
 
-.contact-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
+  }
+  
+  .slides img {
+    width: 100%;
+    object-fit: cover; /* Ajusta el tamaño de la imagen para que cubra el contenedor */
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
 
-.contact-button:hover {
-    animation: bounce 0.5s ease;
-}
-
-.contact-button i {
-    margin-right: 5px;
-}
-
-.contact-button svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    fill: currentColor;
-}
-
-.contact-button.email {
-    background-color: #F05340;
-}
-
-.contact-button.phone {
-    background-color: #007BFF;
-}
-
-.contact-button.whatsapp {
-    background-color: #25D366;
-}
-
-.contact-button.linkedin {
-    background-color: #0077B5;
-}
-
-.contact-button.instagram {
-    background-color: #405DE6;
-}
-
-.contact-button:hover {
-    background-color: #333;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-
-
-/* Media query para hacer la página responsive */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 10px; /* Reducir el relleno de los contenedores para adaptarse a pantallas más pequeñas */
-    }
-
-    header {
-        padding: 10px; /* Reducir el relleno del encabezado para pantallas más pequeñas */
-    }
-
-    nav {
-        flex-direction: column; /* Cambiar la dirección del flex a columna para pantallas más pequeñas */
-        align-items: center; /* Centrar los elementos en el eje horizontal */
-    }
-
-    nav ul {
-        margin-top: 10px; /* Añadir un poco de espacio entre los elementos del menú */
-    }
-
-    nav li {
-        margin-right: 0; /* Eliminar el margen derecho de los elementos del menú */
-        margin-bottom: 10px; /* Añadir un poco de espacio entre los elementos del menú */
-    }
-
-    main {
-        padding-top: 20px; /* Añadir espacio en la parte superior del contenido principal */
-    }
-
-    .intro {
-        padding: 30px; /* Aumentar el relleno de la sección de introducción para pantallas más pequeñas */
-    }
-
-    .skills-list li {
-        margin-bottom: 10px; /* Agregar un margen inferior a los elementos de la lista de habilidades */
-    }
-
-    .project {
-        margin-bottom: 20px; /* Agregar un margen inferior a los proyectos para separarlos */
-    }
-}
-
-
-/* Media query para hacer la página "Acerca de" responsive */
-@media (max-width: 768px) {
-    #about .section-title {
-        font-size: 1.5em; /* Reducir el tamaño del título */
-    }
-
-    .about-content {
-        padding: 20px; /* Aumentar el relleno del contenido */
-    }
-
-    .about-content p {
-        font-size: 16px; /* Reducir el tamaño del texto */
-        line-height: 1.4; /* Ajustar la altura de línea */
-    }
-}
-
-@media (max-width: 768px) {
-    #contact .section-title {
-        font-size: 1.5em; /* Reducir el tamaño del título */
-    }
-
-    .contact-info p {
-        font-size: 16px; /* Reducir el tamaño del texto */
-    }
-
-    .contact-buttons {
-        flex-direction: column; /* Cambiar la dirección del flex a columna para pantallas más pequeñas */
-        gap: 10px; /* Añadir espacio entre los botones */
-    }
-
-    .contact-button {
-        width: 100%; /* Ajustar el ancho de los botones al 100% para ocupar todo el espacio disponible */
-    }
-}
