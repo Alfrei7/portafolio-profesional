@@ -1,6 +1,8 @@
 /* Estilos generales */
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
     margin: 0;
@@ -359,4 +361,69 @@ nav a:hover {
 .proyectDescription{
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+/* Estilos para pantallas pequeñas (hasta 600px) */
+
+/* Pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0.5rem; /* Reducir el relleno del encabezado */
+  }
+  nav ul li {
+    margin-right: 10px; /* Reducir el espacio entre elementos de navegación */
+  }
+  section {
+    padding: 2rem 1rem; /* Reducir el relleno de las secciones */
+  }
+  .carousel {
+    max-width: 300px; /* Reducir el ancho máximo del carrusel */
+  }
+  .carousel .slides img {
+    height: 200px; /* Ajustar la altura de las imágenes del carrusel */
+  }
+  .container {
+    padding: 0 10px; /* Reducir el relleno horizontal del contenedor principal */
+  }
+  footer {
+    padding: 1rem; /* Reducir el relleno del pie de página */
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  nav ul li {
+    margin-right: 15px; /* Ajustar el espacio entre elementos de navegación */
+  }
+  section {
+    padding: 3rem 2rem; /* Ajustar el relleno de las secciones */
+  }
+  .carousel {
+    max-width: 500px; /* Ajustar el ancho máximo del carrusel */
+  }
+  .carousel .slides img {
+    height: 300px; /* Ajustar la altura de las imágenes del carrusel */
+  }
+  .container {
+    padding: 0 20px; /* Ajustar el relleno horizontal del contenedor principal */
+  }
+}
+
+/* Pantallas grandes (escritorios) */
+@media only screen and (min-width: 1025px) {
+  nav ul li {
+    margin-right: 20px; /* Restaurar el espacio entre elementos de navegación */
+  }
+  section {
+    padding: 4rem 2rem; /* Restaurar el relleno de las secciones */
+  }
+  .carousel {
+    max-width: 600px; /* Restaurar el ancho máximo del carrusel */
+  }
+  .carousel .slides img {
+    height: 400px; /* Restaurar la altura de las imágenes del carrusel */
+  }
+  .container {
+    padding: 0 40px; /* Restaurar el relleno horizontal del contenedor principal */
+  }
 }
