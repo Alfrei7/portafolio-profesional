@@ -1,74 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
 
-  function fadeOutSection(section) {
-    section.classList.remove('fade-in');
-    section.classList.add('fade-out');
-  }
-
-  function fadeInSection(section) {
-    section.classList.remove('fade-out');
-    section.classList.add('fade-in', 'section-enter');
-  }
-
-  // Quita la clase fade-out de todas las secciones al cargar la página
-  sections.forEach(function(section) {
-    section.classList.remove('fade-out');
-  });
-
-  document.querySelectorAll('nav a').forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        sections.forEach(function(section) {
-          if (section !== targetSection) {
-            fadeOutSection(section);
-          }
-        });
-        fadeInSection(targetSection);
-      }
-    });
-  });
-
-  function fadeInSection(section) {
-    section.classList.remove('fade-out', 'section-exit'); // Eliminar la clase section-exit si está presente
-    section.classList.add('fade-in', 'section-enter');
-  }
-
-  // Agrega la animación de entrada y salida de secciones al desplazarse por el sitio
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-intersecting');
-      } else {
-        entry.target.classList.remove('is-intersecting');
-      }
-    });
+      entries.forEach(entry => {
+          const section = entry.target;
+
+          if (entry.isIntersecting) {
+              section.classList.remove('fade-out');
+              section.classList.add('fade-in', 'is-intersecting');
+          } else {
+              section.classList.add('fade-out');
+              section.classList.remove('fade-in', 'is-intersecting');
+          }
+      });
   });
 
-  document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
+  sections.forEach(section => {
+      section.classList.add('fade-out');
+      observer.observe(section);
   });
 });
 
-// carrusel
 
-let slideIndex = 0;
+let currentIndex = 0;
 
-function moveSlide(n) {
+function moveSlide(direction) {
   const slides = document.querySelector('.slides');
-  const slideWidth = slides.children[0].offsetWidth; // Obtén el ancho de cada diapositiva
-  const maxIndex = slides.children.length - 1;
+  const totalSlides = slides.querySelectorAll('img').length;
 
-  slideIndex += n;
-  if (slideIndex > maxIndex) {
-    slideIndex = 0; // Vuelve al principio si se llega al final
-  } else if (slideIndex < 0) {
-    slideIndex = maxIndex; // Ir al final si se va hacia atrás desde el principio
+  if (direction === -1 && currentIndex > 0) {
+    currentIndex--;
+  } else if (direction === 1 && currentIndex < totalSlides - 1) {
+    currentIndex++;
   }
 
-  slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`; // Mueve el carrusel
+  const slideWidth = slides.querySelector('img').clientWidth;
+  slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
+
+
+$(document).ready(function(){
+  $('.project-carousel').slick({
+      slidesToShow: 2, // Mostrar 2 proyectos a la vez
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true, // Agregar puntos de navegación
+      responsive: [
+          {
+              breakpoint: 768, // Cambiar a 1 proyecto en pantallas pequeñas
+              settings: {
+                  slidesToShow: 1
+              }
+          }
+      ]
+  });
+});
