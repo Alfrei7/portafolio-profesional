@@ -1,47 +1,53 @@
 <template>
-    <header>
-      <nav>
-        <a href="#hero">Inicio</a>
-        <a href="#about">Acerca de mí</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-      </nav>
-    </header>
-  </template>
+  <header class="header">
+      <h1>Portafolio</h1>
+    <nav class="navbar">
+      <router-link to="/" class="nav-link">Inicio</router-link>
+      <router-link to="/acerca" class="nav-link">Acerca de</router-link>
+      <router-link to="/proyectos" class="nav-link">Proyectos</router-link>
+      <router-link to="/contacto" class="nav-link">Contacto</router-link>
+    </nav>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'HeaderComponent'
+}
+</script>
+
+<style>
+.header {
+  background-color: #97aed2; /* Color de fondo del header */
+  padding: 1rem 2rem; /* Espaciado interno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo h1 {
+  color: #fff; /* Color del texto del nombre del sitio */
+  font-size: 1.5rem; /* Tamaño del texto del nombre del sitio */
+  font-weight: bold; /* Negrita */
+  margin: 0; /* Eliminar margen */
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-link {
+  color: #333; /* Color del texto de los enlaces */
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
+  padding: 0.5rem 1rem; /* Espaciado interno de los enlaces */
+  margin: 0 0.5rem; /* Margen entre los enlaces */
+  transition: color 0.3s ease; /* Transición del color al pasar el ratón */
   
-  <script>
-  export default {
-    name: 'HeaderComponent'
-  }
-  </script>
-  
-  <style scoped>
-  header {
-    background-color: #06090d;
-    color: #fff; 
-    padding: 1rem 0;
-    padding-left: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav {
-    display: flex;
-  }
-  
-  nav a {
-    margin-right: 20px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  nav a:hover {
-    color: #7b3578; 
-  }
-  </style>
+}
+
+.nav-link:hover {
+  color: #f8f9fa; /* Cambio de color al pasar el ratón */
+}
+</style>

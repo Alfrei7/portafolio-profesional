@@ -96,7 +96,7 @@ export default {
 .skill {
   width: 150px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #97aed2;
   color: #333;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
