@@ -21,9 +21,13 @@ export default {
 </script>
 
 <style>
+
+
+
 footer {
-  background-color: #97aed2;
   color: #fff;
+  background-color: #fff;
+  color: #06090d;
   padding: 1rem 0; /* Reducir el padding vertical */
   text-align: center;
 }
@@ -36,7 +40,7 @@ footer .container {
 footer h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #06090d;
 }
 
 footer p {

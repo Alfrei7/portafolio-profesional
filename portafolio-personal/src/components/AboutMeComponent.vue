@@ -19,49 +19,16 @@
   </script>
   
   <style>
-  * Estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    display: flexbox;
-    background-color: #ebf0f6;
-}
-h1, h2, h3 {
-    margin: 0;
-    line-height: 1.2;
-    color: #333; 
-    text-align: center; 
-}
-p {
-    margin: 0.5rem 0; 
-    color: #333; 
-    text-align: justify; 
-    justify-content: space-between;
-    align-items:center;
-}
-a {
-    color: #7b3578;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+ 
+.about-content p{
+ padding-left:50px ;  
+  height: auto;
+  
 }
 
-
-section {
-    height: 100%; 
+ section {
+    height: 100%;
+    width: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,24 +37,85 @@ section {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-section:nth-child(even) {
-    background-color: #97aed2; 
-    color: #fff; 
+
+footer {
+  color: #fff;
+  background-color: #97aed2;
+  color: #06090d;
+  padding: 1rem 0; /* Reducir el padding vertical */
+  text-align: center;
 }
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+footer .container {
+  padding: 2rem;
+  text-align: center;
 }
-section ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -1rem;
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #06090d;
 }
-section li {
-    padding: 0 1rem;
-    margin-bottom: 1rem;
+
+footer p {
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: #06090d  ;
 }
-section li:nth-child(3n+1) {
-    margin-left: 0;
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+footer li {
+  margin: 0 1rem;
+}
+
+footer a {
+  color: #7b3578;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.contact-button i {
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.contact-button.email {
+  background-color: #DB4437;
+}
+
+.contact-button.whatsapp {
+  background-color: #25D366;
+}
+
+.contact-button.linkedin {
+  background-color: #0077B5;
+}
+
+.contact-button.instagram {
+  background-color: #C13584;
 }
   </style>

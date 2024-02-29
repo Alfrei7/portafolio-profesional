@@ -30,45 +30,10 @@
   </script>
   
   <style>
+  body{
+    max-width: 100%;
+  }
 /* ESTILOS DE CONTACTO*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    display: flex; 
-    background-color: #ebf0f6; 
-}
-h1, h2, h3 {
-    margin: 0;
-    line-height: 1.2;
-    color: #333; 
-    text-align: center;
-}
-p {
-    margin: 0.5rem 0; 
-    color: #333;
-    text-align: justify;
-    justify-content: space-between;
-    align-items:center;
-}
-a {
-    color: #7b3578; 
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 .contact-button {
   display: inline-block;
@@ -82,6 +47,8 @@ ul {
   text-decoration: none;
   color: #fff;
   transition: background-color 0.3s;
+  height: auto;
+  width: auto;
 }
 .contact-button i {
   margin-right: 5px;
