@@ -25,8 +25,8 @@
   }
   
   section:nth-child(even) {
-    background-color: #97aed2; /* Fondo alternativo */
-    color: #fff; /* Texto */
+    background-color: #97aed2;
+    color: #fff; 
   }
   
   section h1 {

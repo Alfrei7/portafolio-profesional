@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'AboutSection', // Cambia el nombre del componente a un nombre compuesto
+  name: 'AboutSection',
 }
 </script>
 
@@ -32,8 +32,8 @@ section {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 section:nth-child(even) {
-    background-color: #97aed2; /* Fondo alternativo */
-    color: #fff; /* Texto */
+    background-color: #97aed2; 
+    color: #fff; 
 }
 section h2 {
     font-size: 2rem;
