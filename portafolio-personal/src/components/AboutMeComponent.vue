@@ -20,11 +20,21 @@
   
   <style>
  
-.about-content p{
- padding-left:50px ;  
-  height: auto;
-  
+ #about-me {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.about-me-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
 
  section {
     height: 100%;

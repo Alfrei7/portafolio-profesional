@@ -62,5 +62,83 @@ export default {
     margin: 0;
   }
 
+  section {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+section:nth-child(even) {
+    background-color: #97aed2; /* Fondo alternativo */
+    color: #fff; /* Texto */
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+}
+section li {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+section li:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+footer {
+  
+  background-color: #ebf0f6;
+  color: #06090d;
+  padding: 1rem 0; /* Reducir el padding vertical */
+  text-align: center;
+}
+
+footer .container {
+  padding: 2rem;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #06090d;
+}
+
+footer p {
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: #06090d  ;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+footer li {
+  margin: 0 1rem;
+}
+
+footer a {
+  color: #7b3578;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
   
   </style>

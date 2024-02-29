@@ -26,7 +26,7 @@ export default {
 
 footer {
   color: #fff;
-  background-color: #fff;
+  background-color: #ebf0f6;
   color: #06090d;
   padding: 1rem 0; /* Reducir el padding vertical */
   text-align: center;
