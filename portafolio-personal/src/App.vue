@@ -35,16 +35,16 @@ export default {
 </script>
 
 <style>
-/* Estilos generales para el contenedor de la aplicación */
+
 #app {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa; /* Color de fondo */
+  background-color: #f8f9fa; 
 }
 
-/* Estilos para el contenido dentro del contenedor */
+
 .main-content {
-  margin-top: 80px; /* Ajusta este valor según la altura del header */
-  margin-bottom: 20px; /* Margen inferior para el contenido principal */
+  margin-top: 80px; 
+  margin-bottom: 20px; 
 }
 </style>
 

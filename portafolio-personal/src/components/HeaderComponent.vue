@@ -18,36 +18,29 @@ export default {
 
 <style>
 .header {
-  background-color: #97aed2; /* Color de fondo del header */
-  padding: 1rem 2rem; /* Espaciado interno */
+  background-color: #97aed2;
+  padding: 1rem 2rem; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
 }
 
-.logo h1 {
-  color: #fff; /* Color del texto del nombre del sitio */
-  font-size: 1.5rem; /* Tamaño del texto del nombre del sitio */
-  font-weight: bold; /* Negrita */
-  margin: 0; /* Eliminar margen */
-  text-decoration: none;
-}
 
 .navbar {
   display: flex;
 }
 
 .nav-link {
-  color: #333; /* Color del texto de los enlaces */
-  text-decoration: none; /* Eliminar subrayado de los enlaces */
-  padding: 0.5rem 1rem; /* Espaciado interno de los enlaces */
-  margin: 0 0.5rem; /* Margen entre los enlaces */
-  transition: color 0.3s ease; /* Transición del color al pasar el ratón */
+  color: #333; 
+  text-decoration: none; 
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem; 
+  transition: color 0.3s ease;
   
 }
 
 .nav-link:hover {
-  color: #f8f9fa; /* Cambio de color al pasar el ratón */
+  color: #f8f9fa; 
 }
 </style>

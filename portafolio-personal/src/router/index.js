@@ -24,7 +24,7 @@ const routes = [
     name: 'Proyectos',
     component: ProyectosComponent,
     meta: {
-      showFooter: true // Mostrar el footer en esta página
+      showFooter: true 
     }
   },
   {
@@ -32,7 +32,7 @@ const routes = [
     name: 'AcercaDe',
     component: AboutMeComponent,
     meta: {
-      showFooter: true // Mostrar el footer en esta página
+      showFooter: true 
     }
   }
 ];
