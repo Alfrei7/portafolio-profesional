@@ -1,13 +1,10 @@
 const { defineConfig } = require('@vue/cli-service')
 
-module.exports = defineConfig({
-  transpileDependencies: [
-    'package-name-1',
-    'package-name-2'
-   
-  ]
-})
-
 module.exports = {
-  outputDir: 'docs'
+  chainWebpack: config => {
+    config.plugin('html').tap(args => {
+      args[0].title = 'Mi Aplicación Vue'
+      return args
+    })
+  }
 }

@@ -16,7 +16,7 @@ const routes = [
     name: 'Contacto',
     component: ContactComponent,
     meta: {
-      showFooter: false // No mostrar el footer en esta página
+      showFooter: false 
     }
   },
   {
