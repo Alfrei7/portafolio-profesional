@@ -30,7 +30,7 @@
 }
 
 .about-me-content {
-  max-width: 800px;
+  max-width: 801px;
   text-align: center;
   margin: 0 auto;
 }
