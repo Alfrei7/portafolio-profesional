@@ -9,7 +9,5 @@ module.exports = defineConfig({
 })
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/VueInGitHubPages/https://alfrei7.github.io/portafolio/' //nombre de tu proyecto GitHub
-    : '/'
+  outputDir: 'docs'
 }
