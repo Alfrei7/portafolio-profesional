@@ -103,6 +103,7 @@ footer {
 }
 
 footer .container {
+  background-color: #ebf0f6;
   padding: 2rem;
   text-align: center;
 }
