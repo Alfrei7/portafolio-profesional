@@ -1,10 +1,4 @@
-const { defineConfig } = require('@vue/cli-service');
-
-module.exports = {
-  devServer: {
-    overlay: {
-      warnings: true,
-      errors: true
-    }
-  }
-}
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true
+})
