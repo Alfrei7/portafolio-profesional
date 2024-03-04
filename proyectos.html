@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos CSS externo -->
+</head>
+<body>
+    <div id="app"></div>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="acercaDe.html">Acerca de mí</a>
+            <a href="#skills">Habilidades</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="project-details"  class="fade-out">
+          <h2 class="proyects">Proyectos</h2>
+            <div class="project-card">
+                <div class="carousel">
+                    <button class="prev" onclick="moveSlide(1)">❮</button>
+                    <div class="slides">
+                      <img src="media/indexImage.png" alt="index">
+                      <img src="media/ahorcadoInGame.png" alt="Proyecto 2">
+                      <img src="media/AhorcadoPalabra.png" alt="Proyecto 2">
+                      <img src="media/snakeGameOver.png" alt="Proyecto 2">
+                      <img src="media/snakeIngame.png" alt="Proyecto 2">
+                      <img src="media/triviaimage.png" alt="Proyecto 2">
+                      <img src="media/triviaWin.png" alt="Proyecto 2">
+                      <img src="media/triviaGameOver.png" alt="Proyecto 2">
+    
+                    </div>
+                    <button class="next" onclick="moveSlide(1)">❯</button>
+                  </div>
+                <div class="project-info">
+                    <a href="https://alfrei7.github.io/portafolio-games/"><h3>Portafolio de juegos</h3></a>Portafolio de juegos</h3>
+                    <p class="proyectDescription">Este primer proyecto es un portafolio de juegos simples. Desarrollados con Javascript para poder implementar una buena lógica de programación, la cuál me sirvió mucho a la hora de practicar mis habilidades.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <a href="contacto.html"><h2>Contacto</h2></a>
+        <p>
+            Si estás interesado en trabajar conmigo o tienes alguna pregunta, no dudes en <a href="mailto:tuemail@example.com">contactarme por correo electrónico</a>. También puedes encontrarme en las siguientes redes sociales:
+        </p>
+        <ul>
+            <a href="https://wa.me/+5493442454959" target="_blank" class="contact-button whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.linkedin.com/in/alfredo-iglesias-b1890a220/" target="_blank" class="contact-button linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/alfreig7" target="_blank" class="contact-button instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </ul>
+    </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
