@@ -41,13 +41,13 @@ function moveSlide(direction) {
 
 $(document).ready(function(){
   $('.project-carousel').slick({
-      slidesToShow: 2, // Mostrar 2 proyectos a la vez
+      slidesToShow: 2,
       slidesToScroll: 1,
       arrows: true,
-      dots: true, // Agregar puntos de navegación
+      dots: true, 
       responsive: [
           {
-              breakpoint: 768, // Cambiar a 1 proyecto en pantallas pequeñas
+              breakpoint: 768, 
               settings: {
                   slidesToShow: 1
               }
